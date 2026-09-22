@@ -1,16 +1,16 @@
-#Project Title
+# Project Title
 
 Animal Shelter Intake & Adoption Management System
 
-##Problem Description
+## Problem Description
 
 Animal shelters manage a constant flow of incoming animals, medical needs, volunteer activity, and adoption processes. Many shelters rely on spreadsheets or paper forms, which leads to lost information, inconsistent records, and difficulty tracking an animal’s history. Without a centralized database, shelters struggle to monitor capacity, ensure proper care, and match animals with suitable adopters.
 
-##Purpose of the Database
+## Purpose of the Database
 
 The database will organize and track animals entering the shelter, their medical treatments, adoption applications, volunteer assignments, and final adoption outcomes. This system will help shelter staff improve efficiency, reduce errors, and ensure animals receive proper care while increasing successful adoptions.
 
-##Intended Users
+## Intended Users
 
 Shelter intake staff
 
@@ -22,7 +22,7 @@ Volunteers
 
 Shelter managers and administrators
 
-##Major Data That Must Be Stored
+## Major Data That Must Be Stored
 
 Animal profiles (species, breed, age, medical status, behavior notes)
 
@@ -38,7 +38,7 @@ Volunteer information (name, role, availability)
 
 Adoption records (animal, adopter, date adopted)
 
-##Questions the Database Should Answer
+## Questions the Database Should Answer
 
 1 Which animals are currently available for adoption?
 
@@ -50,7 +50,7 @@ Adoption records (animal, adopter, date adopted)
 
 5 Which volunteers logged the most hours or handled the most animals?
 
-##Initial Business Rules
+## Initial Business Rules
 
 1 Each animal must have exactly one intake record.
 

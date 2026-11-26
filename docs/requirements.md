@@ -1,8 +1,8 @@
-### Animal Shelter Management System Requirements
+# Animal Shelter Management System Requirements
 
 The animal shelter receives animals from the public, animal control agencies, and rescue organizations. Shelter staff track intake information, medical treatments, volunteer activities, adoption applications, and completed adoptions. Volunteers assist with animal care, while prospective adopters submit applications to adopt animals.
 
-### Entities
+## Entities
 
 1. Animal
 2. Medical_Treatment
@@ -12,7 +12,7 @@ The animal shelter receives animals from the public, animal control agencies, an
 6. Adoption_Application
 7. Adoption
 
-### Key Attributes
+## Key Attributes
 
 - Animal_ID
 - Treatment_ID
@@ -22,7 +22,7 @@ The animal shelter receives animals from the public, animal control agencies, an
 - Application_ID
 - Adoption_ID
 
-### Relationships
+## Relationships
 
 - Animal receives Medical_Treatment
 - Animal participates in Volunteer_Assignment

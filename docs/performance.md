@@ -1,90 +1,100 @@
-# Performance and Indexing
+# Performance
 
-Several indexes were created to improve query performance.
+## Overview
 
-## idx_animal_status
+Several indexes were added to improve database performance.
 
-Table:
-Animal
-
-Column:
-Adoption_Status
-
-Reason:
-
-This column is frequently searched when staff need to find animals available for adoption.
-
-Example:
-
-SELECT *
-FROM Animal
-WHERE Adoption_Status = 'Available';
+Indexes help MySQL locate records more efficiently and reduce the need for full table scans when searching tables or performing JOIN operations.
 
 ---
 
-## idx_treatment_animal
+## Implemented Indexes
 
-Table:
-Medical_Treatment
+### idx_animal_status
 
-Column:
-Animal_ID
+Table: Animal
 
-Reason:
+Column: Adoption_Status
+
+Purpose:
+
+Improves searches for animals based on adoption status, such as finding animals currently available for adoption.
+
+---
+
+### idx_treatment_animal
+
+Table: Medical_Treatment
+
+Column: Animal_ID
+
+Purpose:
 
 Improves joins between Animal and Medical_Treatment.
 
 ---
 
-## idx_application_status
+### idx_application_status
 
-Table:
-Adoption_Application
+Table: Adoption_Application
 
-Column:
-Status
+Column: Status
 
-Reason:
+Purpose:
 
-Speeds reporting on approved, denied, and pending applications.
+Improves reporting on pending, approved, and denied applications.
 
 ---
 
-## idx_assignment_volunteer
+### idx_assignment_volunteer
 
-Table:
-Volunteer_Assignment
+Table: Volunteer_Assignment
 
-Column:
-Volunteer_ID
+Column: Volunteer_ID
 
-Reason:
+Purpose:
 
-Supports volunteer activity reports.
+Improves volunteer activity and assignment lookups.
 
 ---
 
-## idx_assignment_animal
+### idx_assignment_animal
 
-Table:
-Volunteer_Assignment
+Table: Volunteer_Assignment
 
-Column:
-Animal_ID
+Column: Animal_ID
 
-Reason:
+Purpose:
 
-Improves animal assignment searches.
+Improves searches for assignments associated with specific animals.
 
 ---
 
-## EXPLAIN Example
+## Query Analysis with EXPLAIN
 
-The following command can be used to verify that MySQL uses an index:
+MySQL provides the EXPLAIN statement to examine how queries are executed.
 
+Example:
+
+```sql
 EXPLAIN
 SELECT *
 FROM Animal
 WHERE Adoption_Status = 'Available';
+```
 
-The EXPLAIN output should show that MySQL can use the idx_animal_status index rather than scanning the entire table.
+EXPLAIN can be used to verify that MySQL uses available indexes rather than performing a full table scan.
+
+---
+
+## Performance Benefits
+
+The implemented indexes improve performance for:
+
+- Animal adoption searches
+- Medical treatment lookups
+- Adoption application reporting
+- Volunteer assignment reporting
+- JOIN operations between related tables
+
+As the database grows, indexes help maintain efficient query performance and reduce execution time.
